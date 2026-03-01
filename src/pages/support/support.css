@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fa;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.help-section h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.help-section p {
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.help-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+}
+.SupportBtn{
+  width: 80%;
+  padding: 12px;
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.SupportBtn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Global Support Styles --- */
+:root {
+  --primary-color: #0071e3; /* Apple Blue */
+  --text-main: #1d1d1f;
+  --text-gray: #6e6e73;
+  --bg-light: #f5f5f7;
+  --border-color: #d2d2d7;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.faq-item, .warranty-section {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  padding: 20px;
+}
+
+/* --- FAQ Section --- */
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item p {
+  color: var(--text-gray);
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+/* --- Warranty & Returns Sections --- */
+.warranty-section, .returns-section {
+  background-color: var(--bg-light);
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.warranty-content ul, .returns-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.warranty-content li, .returns-section li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: var(--text-gray);
+}
+
+
+.warranty-content li::before, .returns-section li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .faq-item, .warranty-section {
+    padding: 20px 5%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .warranty-section, .returns-section {
+    padding: 30px 20px;
+  }
+}

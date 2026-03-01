@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+
+  <style>
+
+:root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --off-white: #f5f5f7;
+  --border-subtle: #e5e5e5;
+  --text-muted: #6e6e73;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background: var(--pure-white);
+  border-radius: 0;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+
+.left-side {
+  flex: 1.2;
+  background: var(--pure-black);
+  color: var(--pure-white);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-side a {
+  color: var(--pure-white);
+  text-decoration: underline;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.left-side a:hover { opacity: 1; }
+
+.left-side h3 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.left-side p {
+  color: #888;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+
+.right-side {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--pure-white);
+}
+
+.email input {
+  width: 100%;
+  padding: 18px 0; 
+  border: none;
+  border-bottom: 2px solid var(--border-subtle);
+  font-size: 16px;
+  margin-bottom: 30px;
+  outline: none;
+  transition: border-color 0.3s;
+  background: transparent;
+}
+
+.email input:focus {
+  border-bottom-color: var(--pure-black);
+}
+
+.email button {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.email button:hover {
+  background-color: #333;
+}
+
+#or {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+.continueWithBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.continueWithBox button{
+  padding: 10px;
+  width:100% ;
+  background-color: white;
+  cursor: pointer;
+  border: solid 0.2px;
+}
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--pure-black);
+  text-decoration: none;
+  color: var(--pure-black);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.button-link:hover {
+  background-color: var(--pure-black);
+  color: var(--pure-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { flex-direction: column; width: 100%; height: auto; }
+  .left-side, .right-side { padding: 40px; }
+}
+  </style> 
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-side">
+      <a href="index.html">CANCEL</a>
+      <h3>Sign In or Join My Store</h3>
+      <p>Please enter your email address to sign in or register to <br>become a My Store member.</p>
+    </div>
+    
+    <div class="right-side">
+      <form class="email">
+     
+          <input type="text" placeholder="Email" required>
+
+        <button type="submit">Continue</button>
+      </form>
+       
+
+      <p id="or">OR</p>
+      <div class="continueWithBox">
+        <a href="#"><button type="button">Sign up with Google</button></a>
+        <a href="#"><button type="button">Sign up with FaceBook</button></a>
+      </div>
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Cart Page Container (Two Columns) */
+.cart-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+}
+
+.cart-left {
+  flex: 2; /* Takes up 66% of the space */
+}
+
+.cart-right {
+  flex: 1; /* Takes up 33% of the space */
+}
+
+/* Typography */
+.cart-page-title {
+  font-family: 'Gravitas One', cursive; /* Assuming you want to keep your brand font */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.cart-count-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* --- PRODUCT CARDS (Like Bose) --- */
+.cart-card {
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.cart-card-content {
+  display: flex;
+  gap: 30px;
+}
+
+.cart-card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Helps images blend into the gray background */
+}
+
+.cart-card-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cart-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cart-card-color {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.qty-stepper button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.cart-card-price {
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: flex-end; /* Pushes price to the bottom */
+}
+
+/* --- ORDER SUMMARY (Right Side) --- */
+.summary-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.tax-note {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.total-line {
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Checkout Buttons */
+.checkout-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-buttons button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.2s;
+}
+
+.checkout-buttons button:hover {
+  opacity: 0.8;
+}
+
+.btn-apple-pay {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn-paypal {
+  background-color: #fff;
+  color: #003087; /* PayPal blue */
+  border: 1px solid #999;
+}
+
+.btn-checkout {
+  background-color: #111;
+  color: #fff;
+  border: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+  .cart-container {
+    flex-direction: column; /* Stacks the columns on mobile */
+  }
+  .cart-card-content {
+    flex-direction: column;
+  }
+  .cart-card-price {
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+}

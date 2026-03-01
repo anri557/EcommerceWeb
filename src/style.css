@@ -1,0 +1,1079 @@
+:root{
+  --bg: #ffffff;
+--text: #111111;
+--accent: #666666;
+
+}
+*{
+  box-sizing: border-box;
+
+  
+}
+body {
+  margin: 0px;
+  background-color: white;
+  font-family: 'inter', sans-serif;
+
+}
+nav {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  height: 80px;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.left-side{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+
+  
+
+}
+.left-side a {
+  position: relative;
+  text-decoration: none;
+  color: #111;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.left-side a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+.hamburger{
+display:none
+}
+.fa-bars{
+  font-size: 26px;
+  color: black;
+  cursor: pointer;
+  margin-left: -40px;
+}
+
+.left-side a:hover::after {
+  width: 100%;
+}
+
+.center{
+  font-size: 1.5em;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center a{
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 0px;
+
+
+}
+.hidden-search{
+  display: none;
+}
+
+.search-box {
+  position: relative;
+  
+}
+
+#searchBtn{
+  background: none;
+  border: none;
+  padding: 16px 18px;
+  cursor: pointer;
+}
+#search-input {
+  padding: 8px 32px 8px 12px; 
+  width: 290px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.95em;
+}
+
+.search-box .fa-magnifying-glass {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.right-side a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+.fa-circle-user{
+  font-size: 26px;
+  color: black;
+  position: relative;
+}
+#search-query, .hidden-search .fa-magnifying-glass{
+  display: none;
+
+}
+
+
+@media screen and (max-width: 1150px) {
+ 
+
+    
+  #search-input {
+    width: 200px;
+
+  }
+}
+@media screen and (max-width: 940px) {
+
+
+  .right-side {
+   gap: 0px;
+  }
+
+  .hamburger{
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .left-side a{
+    display: none;
+  }
+  .right-side {
+    margin-right: 0px;
+  }
+  #search-input {
+    display: none;
+  }
+ 
+.hidden-search{
+    width: 100%;
+    top: 70px;
+    left: 0;
+    padding: 20px 50px;
+    position: absolute;
+    background-color: white;
+    z-index: 1000;  
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  #search-query{
+    width: 90%;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    position: relative;
+    border-radius: 20px;
+    font-size: 0.95em;
+    z-index: 1001;
+
+  }
+  .hidden-search .fa-magnifying-glass {
+    display: block;
+    position: relative;
+    right: 40px;
+    top: 10px;
+    z-index: 1002;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+
+  }
+  .fa-circle-user{
+    display: none;
+    position: absolute;
+  }
+  .hidden-search.active{
+    display: flex;
+  }
+ 
+}
+#products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+  gap: 30px; 
+  padding: 40px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  border: 1px solid #f0f0f0;
+  padding: 15px;
+  width: 100%; 
+  text-align: center;
+  border-radius: 12px; 
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: white;
+}
+
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08); 
+  border-color: transparent;
+}
+.product-img {
+height: 150px;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+}
+
+.product-img img {
+  width: 100%;   
+  height: 100%;
+  object-fit: contain;       
+  border-radius: 5px;
+  background: none;
+  mix-blend-mode: multiply;
+}
+
+#products h3 {
+  font-size: 1em;
+  margin: 20px 0 5px 0;
+}
+.product-info {
+  margin: 10px 0;
+
+  font-size: 0.9em;
+}
+.product-title {
+  font-weight: 600;
+  margin-top: 30px;
+  height: 30px;
+}
+.AddCart {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 15px;
+  position: relative;
+  bottom: 0px;
+  transition: all 0.3s ease;
+}
+.AddCart:hover {
+  background-color: black;
+  color: white;
+}
+.fa-cart-shopping {
+  font-size: 26px;
+  color: black;
+  position: relative;
+}
+.section-img{
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border-bottom:solid ;
+  z-index: -1;
+}
+.section-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-size: contain;
+  filter: brightness(70%);
+  pointer-events: none;
+}
+.hero-text {
+  position: relative;
+  bottom: 220px;
+  left: -20px;
+  z-index: 1000;
+  transform: translate(10%, -20%);
+  text-align: left;
+  color: white;
+
+}
+@media screen and (max-width: 800px) {
+  .hero-text {  
+    
+    transform: translate(5%, -50%);
+
+
+
+  }
+  
+}
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.btn a {
+  text-decoration: none;
+  color: black;
+}
+.btn:hover{
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#filtered-products {
+  background-color: white;
+  width: 350px;
+  position: absolute;
+  top: 75px; 
+  right: 180px;
+  z-index: 1001;
+  border-radius: 12px;
+  height: 320px;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
+  border: 1px solid #f0f0f0;
+
+
+}
+
+
+#filtered-products.show { 
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.filtered-container {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  border-bottom: 1px solid #f5f5f5;
+  padding: 15px;
+  margin: 0;
+  background-color: white;
+  border-radius: 0;
+  gap: 15px;
+  height: auto; 
+}
+
+.filtered-container:hover {
+  background-color: #fafafa;
+}
+
+
+
+
+@media screen and (max-width:1100px){
+  #filtered-products {
+    right:140px;
+    width: 270px;
+  }
+  .filtered-title{
+    font-size: 0.5em;
+  }
+}
+.filtered-img{
+ position: absolute;
+
+  width: 48px;
+  height:48px;
+  object-fit: cover;
+  margin: 10px;
+
+
+}
+.filtered-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+
+.filtered-info{
+height:100px;
+margin-left: 70px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+
+  
+}
+.filtered-title{
+  font-size: 0.6em;
+  line-height: 14px;
+  ;
+}
+.filtered-price{
+  font-weight: 600;
+  font-size: 0.65em;
+margin-top: 0px;
+}
+@media screen and (max-width: 930px) {
+  #filtered-products{
+    background-color: white;
+    width:100%;
+    position: absolute;
+    top: 145px;
+  left: 0px;
+  }
+  .filtered-info{
+  display: flex;
+ flex-direction: column;
+
+  }
+}
+.shop-wrapper, .support-wrapper{
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  width: 450px;
+  height: 300px;
+  background: white;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 20px;
+  gap: 30px;
+
+
+}
+.mega-menu.active{
+  display: flex;
+}
+.LeftRight{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap:30px;
+  margin-top: 20px;
+}
+
+
+.shop-wrapper:hover .mega-menu {
+  display: flex;
+}
+.mega-left {
+  width: 200px;
+  border-right: 1px solid #eee;
+}
+#MegaMenuInput{
+  width: 100%;
+padding: 10px 20px;
+border-radius:20px ;
+}
+.category {
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.category:hover,
+.category.active {
+  background: #f5f5f5;
+}
+.mega-right {
+  flex: 1;
+  display: flex;
+
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.submenu.active {
+  display: flex;
+}
+
+.submenu a {
+  color: #333;
+  text-decoration: none;
+
+}
+
+.submenu a:hover {
+  text-decoration: underline;
+}
+.support-menu{
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 200px;
+  background: white;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 20px;
+  gap: 30px;
+}
+.dropdown-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.support-wrapper:hover .support-menu {
+  display: flex;
+
+}
+#MegaMenuInput{
+  width: 90%;
+  border: #666 1px solid;
+  padding: 10px 20px;
+  position: relative;
+}
+
+   .Activemenu { display: none; } 
+
+
+
+   @media screen and (max-width: 1000px) {
+    .Activemenu {
+      position: fixed;
+      inset: 0; /* Top, Left, Right, Bottom = 0 */
+      height: 100vh; /* Use viewport height, not fixed 800px */
+      width: 100%;
+      
+      /* LAYOUT: Always keep it flex so we can animate */
+      display: flex; 
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background: #fff;
+      z-index: 100;
+      
+      /* HIDDEN STATE (Default) */
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none; 
+      transform: translateY(-30px) scale(0.995);
+      filter: blur(6px);
+      
+      
+      transition: 
+        opacity 0.35s ease, 
+        transform 0.45s cubic-bezier(0.22,1,0.36,1), 
+        filter 0.35s,
+        visibility 0.35s; 
+    }
+  
+    .Activemenu.active {
+      /* VISIBLE STATE */
+      opacity: 1;
+      visibility: visible; /* Re-enable interaction */
+      pointer-events: auto; /* Re-enable clicks inside menu */
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  
+.mega-up{
+ display: flex;
+ position: relative;
+  width: 100%;
+  gap: 30px;
+  
+}
+.mega-up .fa-magnifying-glass{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(-90%, -100%);
+  margin-top: 10px;
+
+  font-size: 18px;
+  color: #666;
+  pointer-events: none;
+  cursor: pointer;
+}
+#closeMenu{
+position: relative;
+right:10px;
+margin-top: 4px;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.Activemenu a{
+  display: flex;
+  justify-content: space-between;
+line-height: 10px;
+}
+.Activemenu li{
+  list-style: none;
+  border-bottom: 1px solid #eee;
+padding:25px 0;
+
+}
+.has-sub a{
+  display: flex;
+  
+}
+  /* first-level expandable menu (smooth) */
+  .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+    transform: translateY(-8px);
+    transition: max-height 0.35s ease, opacity 0.28s ease, transform 0.28s ease;
+
+  }
+  .sub-menu.active {
+    max-height: 600px; /* big enough for content */
+    opacity: 1;
+    display: block;
+    transform: translateY(0);
+  }
+
+  /* level-2 */
+  .sub-menu-level2 {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+  }
+  .sub-menu-level2.active {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #filtered-products2{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    width:100%;
+    height: 500px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    top: 80px;
+    z-index: 10000;
+    display: none;
+
+  }
+
+  #filtered-products2.show { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow { cursor: pointer; font-size: 14px; }
+  .MegaMenuContainer{
+    display: flex;
+  flex-direction: column;
+  width: 95%;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  gap: 10px;
+  height: 110px;
+  cursor: pointer;
+  margin: 10px ;
+  background-color: whitesmoke;
+  border-radius: 16px;
+
+  }
+  .MegaMenuContainer-img{
+    position: absolute;
+left: -10px;
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  margin: 10px;
+
+  }
+  .MegaMenuContainer-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  .MegaMenuContainer-info{
+    height:90px;
+    margin-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .MegaMenuContainer-title{
+    font-size: 0.7em;
+    line-height: 14px;
+    ;
+  }
+  .filtered-price{
+    font-weight: 600;
+    font-size: 0.8em;
+  margin-top: -10px;
+  
+  }
+}
+.products-option-btn{
+  display: flex;
+justify-content: center;
+gap:5px ;
+margin:0 20px;
+}
+.productBtn{
+width: 200px;
+height: 70px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+@media screen and (max-width:600px) {
+  
+  .productBtn{
+    width: 130px;
+    height: 50px;
+  }
+}
+.productBtn:hover{
+background-color: rgb(210, 210, 210);
+
+}
+.productBtn.active{
+  background-color: rgb(210, 210, 210);
+}
+#productAd {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+align-content: center;
+justify-content: center;
+  max-width: 1400px;
+  margin: 100px auto;
+min-height: 0;
+
+
+  }
+  
+  .HeadphonesAd { grid-area: 1 / 1 / 2 / 3; }
+.SmartWatchesAd { grid-area: 2 / 1 / 3 / 2; border-right: 1px solid #111;}
+.PhonesAd { grid-area: 2 / 2 / 3 / 3; border-left: 1px solid #111;}
+
+.HeadphonesAd, .SmartWatchesAd, .PhonesAd {
+  position: relative;
+  display: flex;
+  align-items: flex-end; 
+  overflow: hidden;
+}
+.HeadphonesAd img, 
+.SmartWatchesAd img, 
+.PhonesAd img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%);
+  transition: transform 0.5s ease;
+}
+  
+  .ProductAdHero{
+    position: absolute;
+margin-top: -180px;
+    color: #e5e5e5;
+    text-align: left;
+    z-index: 10;
+  }
+  @media screen and (max-width:800px) {
+    .ProductAdHero h2{
+      font-size: 20px;
+    }
+    
+  }
+  @media screen and (max-width:600px) {
+    .ProductAdHero h2{
+      font-size: 16px;
+    }
+    .ProductAdHero p{
+      font-size: 10px;
+    }
+    
+  }
+  .ProductAdHero, .SmartwatchHero, .phonesHero {
+    position: absolute;
+    bottom: 40px; 
+    left: 40px;
+    color: #e5e5e5;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .ProductAdHero h2, .SmartwatchHero h2, .phonesHero h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .btn {
+    pointer-events: auto;
+    padding: 10px 25px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+
+  @media screen and (max-width: 800px) {
+    #productAd {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .HeadphonesAd, .SmartWatchesAd, .PhonesAd {
+      grid-area: auto;
+    }
+    .ProductAdHero h2, .SmartwatchHero h2, .phonesHero h2 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .ProductAdHero h2, .SmartwatchHero h2, .phonesHero h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  #brandsLogoSection{
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .logo{
+    width: 60px;
+
+  }
+  .logo img{
+    width: 100%;
+  }
+  .why-buy{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    overflow-x: hidden;
+ 
+  }
+  .features{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    transform: translateX(0px);
+    transition: ease-in 0.3s;
+  }
+  @media screen and (max-width:1000px) {
+    .features{
+      transform: translateX(0px);
+    }
+  }
+  #featured-icon{
+   font-size: 40px;
+    width: 90px;
+    height: 90px;
+    background-color: #efebeb;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    display: block;
+    position: inherit;
+  }
+
+  .feature{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px 20px;
+
+  
+
+  }
+  .feature a{
+    text-decoration: none;
+    color: rgba(0, 0, 255, 0.769);
+  }
+  .feature a:hover{
+    color: rgba(3, 3, 199, 0.769);
+  }
+  @media screen and (max-width: 800px) {
+ .feature {
+  min-width: 400px;
+
+}
+
+  }
+  .section-title{
+    position: relative;
+margin-left:50px ;
+    width: 100%;
+    font-size: 30px;
+  }
+  .controls{
+    display: flex;
+    gap: 5px;
+display: none;
+    width: 90%;
+justify-content: end;
+margin-top: 50px;
+
+  }
+  #next, #prev{
+    width: 35px;
+    height: 35px;
+    
+    border-radius: 50%;
+    align-content: center;
+    text-align: center; 
+    border: solid black 1px;
+    cursor: pointer;
+
+  }
+  @media screen and (max-width: 800px) {
+    .feature {
+     min-width: 400px;
+   
+   }
+   .controls{
+    display: flex;
+   }
+     }
+     .sign-up{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+
+     }
+     .Email-input{
+       display: flex;
+       justify-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      }
+      .Email-input input{
+       width: 40% ;
+        border: none;
+        height: 45px;
+        border-bottom:solid 1px ;
+      }
+      @media screen and (max-width:1000px) {
+        
+      }
+      input:focus, 
+textarea:focus, 
+select:focus, 
+button:focus {
+    outline: none;
+}
+     .Email-input button{
+      padding: 12px 0px;
+      background-color: white;
+      width: 100px;
+      border: solid 1px;
+      cursor: pointer;
+      color:#111;
+      font-size: 16px;
+     }
+     @media screen and (max-width:1000px) {
+      .Email-input{
+        flex-direction: column;
+        height: 400px;
+      }
+     }
+     .product-card{
+      border: 1px solid #f0f0f0;
+      padding: 15px;
+      width: 100%; 
+      text-align: center;
+      border-radius: 12px; 
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      background: white;
+        
+
+     }
+     #filter-iphone, #filter-JBL, #filter-samsung, #filter-nothing, #filter-pixel, #filter-xiaomi, #filter-applewatch, #filter-GarminWatches, #filter-samsungWatches, #filter-airpods, #filter-bose, #filter-Sony{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+      gap: 30px; 
+      padding: 10px 50px;
+      max-width: 1400px;
+      margin: 0 auto; 
+     }
