@@ -16,7 +16,7 @@ if(SamsungList.length === 0){
 SamsungList.forEach(p => {
   SamsungFilter.innerHTML+=`
   <div class="container">
-  <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+  <a  href="/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
     <div class="product-img">
       <img src="${p.image}" alt="${p.title}" />
     </div>

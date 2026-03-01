@@ -1,5 +1,5 @@
 // 1. MUST include .js extension
-import { products } from "./data/product.js";
+import { products } from "./docs/data/product.js";
 
 // 2. Initialize the cart from LocalStorage! (You were missing this line)
 let cart = JSON.parse(localStorage.getItem("CART_DATA")) || [];
@@ -118,7 +118,7 @@ if (searchInput && filterContainer) {
         filtered.forEach(p => {
             filterContainer.innerHTML += `
                 <div class="filtered-container"> 
-                <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+                <a  href="/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
                     <div class="filtered-img"><img src="${p.image}" /></div> 
                     <div class="filtered-info">
                         <div class="filtered-title"><h3>${p.title}</h3></div>
@@ -162,7 +162,7 @@ if (searchQuery && filterContainer) {
     filtered.forEach(p => {
       filterContainer.innerHTML += `
         <div class="filtered-container">
-        <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+        <a  href="/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
           <div class="filtered-img">
             <img src="${p.image}" />
           </div>
@@ -206,7 +206,7 @@ if (MegaMenuInput && MegaMenuFilterContainer) {
     filtered.forEach(p => {
       MegaMenuFilterContainer.innerHTML += `
         <div class="MegaMenuContainer">
-        <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+        <a  href="/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
           <div class="MegaMenuContainer-img">
             <img src="${p.image}" />
           </div>
