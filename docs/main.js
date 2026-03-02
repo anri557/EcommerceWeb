@@ -1,4 +1,4 @@
-import { products } from "./docs/data/product.js";
+import { products } from "./data/product.js";
 
 const container = document.getElementById("products");
 
