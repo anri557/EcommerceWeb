@@ -18,7 +18,14 @@ export const products = [
   { id: 17, title: "Samsung Galaxy S25 FE 5G S731B/DS 8/256GB Navy", category: "phones", price: 509, image: "/EcommerceWeb/assets/samsung25fe/51Q0M3d7QdL._AC_SY300_SX300_QL70_FMwebp_.webp", description: "Fan-favorite features at a great price. Enjoy vibrant colors, pro-grade cameras, and robust battery life." },
   { id: 18, title: "Samsung Galaxy S25 5G SM-S931B/DS 256GB 12GB (Navy)", category: "phones", price: 709, image: "/EcommerceWeb/assets/samsung25/61kNi0P-svL._AC_SY300_SX300_QL70_FMwebp_.webp", description: "The perfect everyday companion featuring an upgraded processor, sleek Navy design, and a brilliant AMOLED screen." },
   { id: 19, title: "Apple iPhone 16, US Version, 128GB, Teal", category: "phones", price: 539, image: "/EcommerceWeb/assets/iphone16/71dAfxOFDuL._AC_SY300_SX300_QL70_FMwebp_.webp", description: "Beautifully durable design, an advanced dual-camera system, and blazing fast performance in a stunning Teal finish." },
-  { id: 20, title: "Apple iPhone 17 Pro, US Version, 1TB, eSIM, Deep Blue", category: "phones", price: 1399, image: "/EcommerceWeb/assets/iphone17pro/41+ftcBTX5L._AC_SX679_.jpg", description: "Pro-level storage for creators. Features an aerospace-grade titanium design and next-gen computational photography." },
+  { 
+    id: 20, 
+    title: "Apple iPhone 17 Pro, US Version, 1TB, eSIM, Deep Blue", 
+    category: "phones", 
+    price: 1399, 
+    image: "/EcommerceWeb/assets/iphone17pro/41+ftcBTX5L._AC_SX679_.jpg", 
+    description: "Pro-level storage for creators. Features an aerospace-grade titanium design and next-gen computational photography." 
+  },
   { id: 21, title: "Apple iPhone 17, US Version, 256GB, eSIM, Black", category: "phones", price: 799, image: "/EcommerceWeb/assets/iphone17/61I+Ttkp5LL._AC_SL1500_.jpg", description: "The essentials perfected. A brilliant display, incredibly capable cameras, and all-day battery life for everything you do." },
   { id: 22, title: "Samsung Galaxy Watch 8 (2025) 44mm Smartwatch", category: "watches", price: 349, image: "/EcommerceWeb/assets/galaxywatch8/616KEp7qQvL._AC_SX679_.jpg", description: "The next generation of wrist-based wellness. Featuring advanced sensors, enhanced battery, and seamless Galaxy integration." },
   { id: 23, title: "Samsung Galaxy Watch Ultra (2025) 47mm LTE Smartwatch", category: "watches", price: 499, image: "/EcommerceWeb/assets/galaxywatchultra/81MfFirGBxL._AC_SX679_.jpg", description: "Built for the extreme. Rugged titanium design, precision multi-band GPS, and extreme battery life for your toughest adventures." },

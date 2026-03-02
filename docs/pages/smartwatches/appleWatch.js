@@ -18,7 +18,7 @@ if(AppWatchList.length===0){
 AppWatchList.forEach(p=>{
   FilterAppWatch.innerHTML+=
   `<div class="container">
-    <a href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+    <a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
       <div class="product-img">
         <img src="${p.image}" alt="${p.title}" />
       </div>
