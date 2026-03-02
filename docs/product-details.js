@@ -1,4 +1,4 @@
-import { products } from "./docs/data/product.js";
+import { products } from "./data/product";
 
 // --- SINGLE PRODUCT DISPLAY LOGIC ---
 const params = new URLSearchParams(window.location.search);
@@ -84,7 +84,7 @@ filterContainer.classList.add("show")
 filtered.forEach(p => {
   filterContainer.innerHTML += `
    <div class="filtered-container"> 
-<a href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+<a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
    <div class="filtered-img">
     <img src="${p.image}" /> 
     </div> 
@@ -149,7 +149,7 @@ searchQuery.addEventListener("input", () => {
   filtered.forEach(p => {
     filterContainer.innerHTML += `
       <div class="filtered-container">
-      <a href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+      <a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
         <div class="filtered-img">
           <img src="${p.image}" />
         </div>
@@ -286,8 +286,7 @@ MegaMenuInput.addEventListener("input", () => {
   filtered.forEach(p => {
     MegaMenuFilterContainer.innerHTML += `
     <div class="MegaMenuContainer">
-      <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit; display: flex; width: 100%;">
-        <div class="MegaMenuContainer-img">
+<a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
           <img src="${p.image}" />
         </div>
         <div class="MegaMenuContainer-info">
