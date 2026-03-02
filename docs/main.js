@@ -305,8 +305,8 @@ function handleSearch(query) {
   const value = query.trim();
   if (!value) return;
 
-  window.location.href =
-    `/docs/product.html?search=${encodeURIComponent(value)}`;
+
+    window.location.href = `/EcommerceWeb/product.html?search=${encodeURIComponent(value)}`;
 }
 bindSearch(searchInput);
 bindSearch(MegaMenuInput);
@@ -323,7 +323,7 @@ function HandleProducts(category) {
 
   filtered.forEach(pro => {
     container.innerHTML += `
-<a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+<a href="/EcommerceWeb/product-details.html?id=${pro.id}" class="product-link" style="text-decoration: none; color: inherit;">
       <div class="container">
         <div class="product-img">
           <img src="${pro.image}" />
