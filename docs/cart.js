@@ -1,5 +1,5 @@
 // 1. MUST include .js extension
-import { products } from "./docs/data/product.js";
+import { products } from "./data/product.js";
 
 // 2. Initialize the cart from LocalStorage! (You were missing this line)
 let cart = JSON.parse(localStorage.getItem("CART_DATA")) || [];
