@@ -1,4 +1,4 @@
-import { products } from "./data/product";
+import { products } from "./data/product.js";
 
 // --- SINGLE PRODUCT DISPLAY LOGIC ---
 const params = new URLSearchParams(window.location.search);
