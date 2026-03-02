@@ -18,7 +18,7 @@ function render(list) {
   iphone.forEach(p => {
     FilterIphone.innerHTML += `
       <div class="product-card">
-        <a  href="/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+        <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
           <div class="product-img">
             <img src="${p.image}" alt="${p.title}" />
           </div>

@@ -33,7 +33,7 @@ SamsungList.forEach(p => {
 }
 render(products)
 
-const cart=JSON.parse(localStorage.getItem("CART_DATA"))
+const cart=JSON.parse(localStorage.getItem("CART_DATA"))||[]
 
 document.addEventListener('click',(e)=>{
 if (e.target.classList.contains('AddCart')){
@@ -91,7 +91,7 @@ filterContainer.classList.add("show")
 filtered.forEach(p => {
   filterContainer.innerHTML += `
    <div class="filtered-container"> 
-<a href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+<a href="/src/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
    <div class="filtered-img">
     <img src="${p.image}" /> 
     </div> 
@@ -156,7 +156,7 @@ searchQuery.addEventListener("input", () => {
   filtered.forEach(p => {
     filterContainer.innerHTML += `
       <div class="filtered-container">
-      <a href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+      <a href="product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
         <div class="filtered-img">
           <img src="${p.image}" />
         </div>
@@ -293,7 +293,7 @@ MegaMenuInput.addEventListener("input", () => {
   filtered.forEach(p => {
     MegaMenuFilterContainer.innerHTML += `
     <div class="MegaMenuContainer">
-      <a  href="/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit; display: flex; width: 100%;">
+      <a  href="product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit; display: flex; width: 100%;">
         <div class="MegaMenuContainer-img">
           <img src="${p.image}" />
         </div>
@@ -325,7 +325,7 @@ function handleSearch(query) {
   if (!value) return;
 
   window.location.href =
-    `/docs/product.html?search=${encodeURIComponent(value)}`;
+    `/src/product.html?search=${encodeURIComponent(value)}`;
 }
 bindSearch(searchInput);
 bindSearch(MegaMenuInput);
