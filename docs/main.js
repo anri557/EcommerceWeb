@@ -135,7 +135,7 @@ filterContainer.innerHTML = ""; // Clear old results first to prevent duplicates
 filtered.forEach(p => {
   filterContainer.innerHTML += `
     <div class="filtered-container">
-     <a href="/EcommerceWeb/docs/product.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+     <a href="/EcommerceWeb/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
         <div class="filtered-img">
           <img src="${p.image}" alt="${p.title}" />
         </div>
@@ -272,7 +272,7 @@ MegaMenuInput.addEventListener("input", () => {
   filtered.forEach(p => {
     MegaMenuFilterContainer.innerHTML += `
     <div class="MegaMenuContainer">
-      <a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+       <a href="/EcommerceWeb/docs/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
         <div class="MegaMenuContainer-img">
           <img src="${p.image}" />
         </div>
@@ -324,7 +324,7 @@ function HandleProducts(category) {
 
   filtered.forEach(pro => {
     container.innerHTML += `
-<a href="/EcommerceWeb/product-details.html?id=${pro.id}" class="product-link" style="text-decoration: none; color: inherit;">
+  <a href="/EcommerceWeb/docs/product-details.html?id=${p.id}"class="product-link" style="text-decoration: none; color: inherit;">
       <div class="container">
         <div class="product-img">
           <img src="${pro.image}" />
