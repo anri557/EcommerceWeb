@@ -16,7 +16,7 @@ function renderProducts(list) {
   list.forEach(p => {
     container.innerHTML += `
     <div class="container">
-   <a href="/EcommerceWeb/pages/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+   <a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
     <div class="product-img">
     <img src="${p.image}" />
     </div>
@@ -69,7 +69,7 @@ filterContainer.classList.add("show")
 filtered.forEach(p => {
   filterContainer.innerHTML += `
    <div class="filtered-container"> 
-<a href="/EcommerceWeb/pages/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+<a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
    <div class="filtered-img">
     <img src="${p.image}" /> 
     </div> 
