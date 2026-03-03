@@ -40,7 +40,7 @@ gap:  30px;
   
 
 }
-@media screen AND (max-width:980px){
+@media screen AND (max-width:900px){
   .left-side{
     gap: 0px;
   }
