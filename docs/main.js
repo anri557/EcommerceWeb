@@ -135,7 +135,7 @@ filterContainer.innerHTML = ""; // Clear old results first to prevent duplicates
 filtered.forEach(p => {
   filterContainer.innerHTML += `
     <div class="filtered-container">
-     <a href="/EcommerceWeb/product.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
+     <a href="/EcommerceWeb/docs/product.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
         <div class="filtered-img">
           <img src="${p.image}" alt="${p.title}" />
         </div>
