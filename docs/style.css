@@ -895,7 +895,7 @@ margin-top: -180px;
   #brandsLogoSection{
     display: flex;
     width: 100%;
-
+    overflow-x: scroll;
     justify-content: center;
     align-items: center;
   }
