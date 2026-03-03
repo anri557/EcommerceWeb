@@ -23,7 +23,7 @@ export const products = [
     title: "Apple iPhone 17 Pro, US Version, 1TB, eSIM, Deep Blue", 
     category: "phones", 
     price: 1399, 
-    image: "/EcommerceWeb/docs/assets/iphone17pro/41+ftcBTX5L._AC_SX679_.jpg", 
+    image: "/EcommerceWeb/assets/iphone17pro/41+ftcBTX5L._AC_SX679_.jpg", 
     description: "Pro-level storage for creators. Features an aerospace-grade titanium design and next-gen computational photography." 
   },
   { id: 21, title: "Apple iPhone 17, US Version, 256GB, eSIM, Black", category: "phones", price: 799, image: "/EcommerceWeb/assets/iphone17/61I+Ttkp5LL._AC_SL1500_.jpg", description: "The essentials perfected. A brilliant display, incredibly capable cameras, and all-day battery life for everything you do." },
