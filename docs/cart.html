@@ -18,7 +18,15 @@
   
     <link rel="stylesheet" href="/EcommerceWeb/style.css">
   <link rel="stylesheet" href="cart.css">
+  <style>
+    .checkout-buttons a {
+  text-decoration: none; 
+  display: block;        
+  width: 100%;           
+}
+  </style>
 </head>
+
 <body>
   <nav>
     <div class="left-side">
@@ -202,11 +210,18 @@
         <span>Total</span>
         <span id="total-price">$0.00</span>
       </div>
-
       <div class="checkout-buttons">
-        <button class="btn-apple-pay"><i class="fa-brands fa-apple"></i> Pay</button>
-        <button class="btn-paypal"><i class="fa-brands fa-paypal"></i></button>
-        <button class="btn-checkout"><i class="fa-solid fa-lock"></i> CHECKOUT</button>
+        <a href="/EcommerceWeb/login.html">
+          <button class="btn-apple-pay"><i class="fa-brands fa-apple"></i> Pay</button>
+        </a>
+      
+        <a href="/EcommerceWeb/login.html">
+          <button class="btn-paypal"><i class="fa-brands fa-paypal"></i></button>
+        </a>
+      
+        <a href="/EcommerceWeb/login.html">
+          <button class="btn-checkout"><i class="fa-solid fa-lock"></i> CHECKOUT</button>
+        </a>
       </div>
     </div>
 
