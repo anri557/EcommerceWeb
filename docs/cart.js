@@ -180,6 +180,30 @@ if (searchQuery && filterContainer) {
   });
 }
 
+// Mega Menu Search
+if (MegaMenuInput && MegaMenuFilterContainer) {
+  MegaMenuInput.addEventListener("input", () => {
+    const value = MegaMenuInput.value.toLowerCase().trim();
+    MegaMenuFilterContainer.innerHTML = "";
+
+    if (value === "") {
+      MegaMenuFilterContainer.classList.remove("show");
+      return;
+    }
+
+    const searchWords = value.split(" ");
+    const filtered = products.filter(p => {
+      const title = p.title.toLowerCase();
+      return searchWords.every(word => title.includes(word));
+    });
+
+    if (filtered.length === 0) {
+      MegaMenuFilterContainer.classList.remove("show");
+      return;
+    }
+
+  });
+}
 
 // Close search on outside click
 document.addEventListener("click", (event) => {
