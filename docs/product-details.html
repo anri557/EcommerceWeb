@@ -151,52 +151,61 @@ padding:25px 0;
   }
 
   .arrow { cursor: pointer; font-size: 14px; }
-  .MegaMenuContainer{
-    display: flex;
+  .MegaMenuContainer {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 95%;
   border-bottom: 1px solid #ccc;
   padding: 20px;
   gap: 10px;
   height: 110px;
   cursor: pointer;
-  margin: 10px ;
+  margin: 10px;
   background-color: whitesmoke;
   border-radius: 16px;
+  position: relative; /* FIX 1: Keeps the absolute image inside this box */
+  overflow: hidden; /* FIX 2: Prevents any accidental spillover */
+}
 
-  }
-  .MegaMenuContainer-img{
-    position: absolute;
-left: -10px;
-  width: 100px !important;
-  height: 60px !important;
-  object-fit: cover !important;
-  margin: 10px !important;
+.MegaMenuContainer-img {
+  position: absolute;
+  left: 10px; /* Pushed in slightly so it doesn't clip */
+  top: 50%;
+  transform: translateY(-50%); /* Perfectly centers the image vertically */
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 !important;
+}
 
-  }
-  .MegaMenuContainer-img img{
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    mix-blend-mode: multiply !important;
-  }
-  .MegaMenuContainer-info{
-    height:90px;
-    margin-left: 120px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .MegaMenuContainer-title{
-    font-size: 0.7em;
-    line-height: 14px;
-    ;
-  }
-  .filtered-price{
-    font-weight: 600;
-    font-size: 0.7em;
-  margin-top: -10px;
-  
+/* Added a fallback just in case your JS outputs the <img> without a wrapper div */
+.MegaMenuContainer-img img,
+.MegaMenuContainer > img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 80px; 
+  max-height: 80px;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+}
+
+.MegaMenuContainer-info {
+  margin-left: 100px; /* Pushes the text safely past the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MegaMenuContainer-title {
+  font-size: 0.8em; /* Slightly bumped up for readability */
+  line-height: 1.2;
+}
+
+.filtered-price {
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-top: 5px; /* Cleaned up negative margin */
+
   }
 }
     </style>
