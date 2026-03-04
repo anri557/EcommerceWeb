@@ -156,9 +156,13 @@ h3 {
   .faq-item, .warranty-section {
     padding: 20px 5%;
   }
-
   h2 {
     font-size: 2rem;
+  }
+  .MegaMenuContainer-title{
+    font-size: 0.7em;
+    line-height: 14px;
+    ;
   }
   
   .warranty-section, .returns-section {
