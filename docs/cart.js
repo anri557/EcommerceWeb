@@ -202,6 +202,25 @@ if (MegaMenuInput && MegaMenuFilterContainer) {
       return;
     }
 
+    MegaMenuFilterContainer.classList.add("show");
+    filtered.forEach(p => {
+      MegaMenuFilterContainer.innerHTML += `
+        <div class="MegaMenuContainer">
+       <a href="/EcommerceWeb/product-details.html?id=${pro.id}" class="product-link" style="text-decoration: none; color: inherit;">
+          <div class="MegaMenuContainer-img">
+            <img src="${p.image}" />
+          </div>
+          <div class="MegaMenuContainer-info">
+          <div class="MegaMenuContainer-title">
+            <h3>${p.title}</h3>
+            </div>
+            <div class="MegaMenuContainer-price">
+            <p>$${p.price}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
   });
 }
 
