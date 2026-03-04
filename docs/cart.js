@@ -90,7 +90,7 @@ const hamburger = document.querySelector(".hamburger");
 const activeMenu = document.querySelector(".Activemenu");
 const closeMenu = document.querySelector('#closeMenu');
 const MegaMenuInput = document.getElementById("MegaMenuInput");
-const MegaMenuFilterContainer = document.getElementById("filtered-products2");
+
 
 // Desktop Search
 if (searchInput && filterContainer) {
@@ -180,49 +180,6 @@ if (searchQuery && filterContainer) {
   });
 }
 
-// Mega Menu Search
-if (MegaMenuInput && MegaMenuFilterContainer) {
-  MegaMenuInput.addEventListener("input", () => {
-    const value = MegaMenuInput.value.toLowerCase().trim();
-    MegaMenuFilterContainer.innerHTML = "";
-
-    if (value === "") {
-      MegaMenuFilterContainer.classList.remove("show");
-      return;
-    }
-
-    const searchWords = value.split(" ");
-    const filtered = products.filter(p => {
-      const title = p.title.toLowerCase();
-      return searchWords.every(word => title.includes(word));
-    });
-
-    if (filtered.length === 0) {
-      MegaMenuFilterContainer.classList.remove("show");
-      return;
-    }
-
-    MegaMenuFilterContainer.classList.add("show");
-    filtered.forEach(p => {
-      MegaMenuFilterContainer.innerHTML += `
-        <div class="MegaMenuContainer">
-       <a href="/EcommerceWeb/product-details.html?id=${pro.id}" class="product-link" style="text-decoration: none; color: inherit;">
-          <div class="MegaMenuContainer-img">
-            <img src="${p.image}" />
-          </div>
-          <div class="MegaMenuContainer-info">
-          <div class="MegaMenuContainer-title">
-            <h3>${p.title}</h3>
-            </div>
-            <div class="MegaMenuContainer-price">
-            <p>$${p.price}</p>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-  });
-}
 
 // Close search on outside click
 document.addEventListener("click", (event) => {
