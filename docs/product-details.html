@@ -151,61 +151,59 @@ padding:25px 0;
   }
 
   .arrow { cursor: pointer; font-size: 14px; }
+  /* 1. The Main Container - Now using Flexbox to align items side-by-side */
   .MegaMenuContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 95%;
-  border-bottom: 1px solid #ccc;
-  padding: 20px;
-  gap: 10px;
-  height: 110px;
-  cursor: pointer;
-  margin: 10px;
-  background-color: whitesmoke;
-  border-radius: 16px;
-  position: relative; /* FIX 1: Keeps the absolute image inside this box */
-  overflow: hidden; /* FIX 2: Prevents any accidental spillover */
-}
+    display: flex;
+    align-items: center; /* Centers the image and text vertically */
+    width: 95%;
+    margin: 10px auto; /* Centers the box itself */
+    padding: 20px 30px; /* Gives nice breathing room inside the box */
+    gap: 30px; /* Creates the space between the image and the text */
+    background-color: #f5f5f5; /* Light gray background */
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid #eaeaea; /* Optional subtle border */
+    box-sizing: border-box;
+    cursor: pointer;
+  }
 
-.MegaMenuContainer-img {
-  position: absolute;
-  left: 10px; /* Pushed in slightly so it doesn't clip */
-  top: 50%;
-  transform: translateY(-50%); /* Perfectly centers the image vertically */
-  width: 80px !important;
-  height: 80px !important;
-  margin: 0 !important;
-}
+  /* 2. The Image Wrapper - Keeps the image constrained */
+  .MegaMenuContainer-img {
+    flex-shrink: 0; /* Prevents the image container from being squished */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* Added a fallback just in case your JS outputs the <img> without a wrapper div */
-.MegaMenuContainer-img img,
-.MegaMenuContainer > img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 80px; 
-  max-height: 80px;
-  object-fit: contain !important;
-  mix-blend-mode: multiply !important;
-}
+  /* 3. The Image Itself - Fits perfectly inside the wrapper */
+  .MegaMenuContainer-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevents stretching */
+    mix-blend-mode: multiply; /* Removes the white background */
+  }
 
-.MegaMenuContainer-info {
-  margin-left: 100px; /* Pushes the text safely past the image */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  /* 4. The Text Wrapper - Stacks the Title and Price */
+  .MegaMenuContainer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px; /* Space between the title and the price */
+  }
 
-.MegaMenuContainer-title {
-  font-size: 0.8em; /* Slightly bumped up for readability */
-  line-height: 1.2;
-}
+  /* 5. Typography Formatting */
+  .MegaMenuContainer-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.3;
+  }
 
-.filtered-price {
-  font-weight: 600;
-  font-size: 0.8em;
-  margin-top: 5px; /* Cleaned up negative margin */
-
+  .filtered-price {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
   }
 }
     </style>

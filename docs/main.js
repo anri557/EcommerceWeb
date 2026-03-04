@@ -324,7 +324,7 @@ function HandleProducts(category) {
 
   filtered.forEach(pro => {
     container.innerHTML += `
-  <a href="/EcommerceWeb/product-details.html?id=${pro.id}"class="product-link" style="text-decoration: none; color: inherit;">
+  <a href="/EcommerceWeb/product-details.html?id=${pro.id}" class="product-link" style="text-decoration: none; color: inherit;">
       <div class="container">
         <div class="product-img">
           <img src="${pro.image}" />
