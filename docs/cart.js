@@ -90,7 +90,7 @@ const hamburger = document.querySelector(".hamburger");
 const activeMenu = document.querySelector(".Activemenu");
 const closeMenu = document.querySelector('#closeMenu');
 const MegaMenuInput = document.getElementById("MegaMenuInput");
-
+const MegaMenuFilterContainer = document.getElementById("filtered-products2");
 
 // Desktop Search
 if (searchInput && filterContainer) {
