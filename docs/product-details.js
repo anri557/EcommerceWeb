@@ -252,57 +252,6 @@ document.querySelectorAll('.has-subsub > a ').forEach(span => {
 });
 
  
-const MegaMenuInput = document.getElementById("MegaMenuInput");
-const MegaMenuFilterContainer = document.getElementById("filtered-products2");
-
-MegaMenuInput.addEventListener("input", () => {
-  const value = MegaMenuInput.value.toLowerCase().trim();
-  MegaMenuFilterContainer.innerHTML = "";
-
-  // 1️⃣ If input is empty → hide
-  if (value === "") {
-    MegaMenuFilterContainer.classList.remove("show");
-    return;
-  }
-
-  // 2️⃣ Split words
-  const searchWords = value.split(" ");
-
-  // 3️⃣ Filter products
-  const filtered = products.filter(p => {
-    const title = p.title.toLowerCase();
-    return searchWords.every(word => title.includes(word));
-  });
-
-  // 4️⃣ If no matches → hide
-  if (filtered.length === 0) {
-    MegaMenuFilterContainer.classList.remove("show");
-    return;
-  }
-
-  // 5️⃣ Show results
-  MegaMenuFilterContainer.classList.add("show");
-
-  filtered.forEach(p => {
-    MegaMenuFilterContainer.innerHTML += `
-    <div class="MegaMenuContainer">
-<a href="/EcommerceWeb/product-details.html?id=${p.id}" class="product-link" style="text-decoration: none; color: inherit;">
-          <img src="${p.image}" />
-        </div>
-        <div class="MegaMenuContainer-info">
-          <div class="MegaMenuContainer-title">
-            <h3>${p.title}</h3>
-          </div>
-          <div class="MegaMenuContainer-price">
-            <p>$${p.price}</p>
-          </div>
-        </div>
-      </a>
-    </div>
-  `;
-});
-});
-
 
 function bindSearch(input) {
   input.addEventListener("keydown", (e) => {
